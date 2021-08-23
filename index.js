@@ -1,12 +1,8 @@
-const request = require('request');
-
-
-
 const { fetchBreedDescription } = require('./breedFetcher');
 
 const breedName = process.argv[2];
 
-fetchBreedDescription(breedName, (error, desc) => { //error and desc are arguments in an anonymouns 
+fetchBreedDescription(breedName, (error, desc) => { //error and desc are arguments in an anonymouns
   if (error) {
     console.log('Error fetch details:', error);
   } else {
